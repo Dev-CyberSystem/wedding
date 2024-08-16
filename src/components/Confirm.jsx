@@ -2,7 +2,7 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
 import { useParams } from "react-router-dom";
-
+import homero from "../assets/homero.jpg";
 const Confirm = () => {
   const { code } = useParams();
   const [message, setMessage] = useState("");
@@ -24,7 +24,13 @@ const Confirm = () => {
 
   console.log(code, "code");
   console.log(message, "message");
-  return <div>{message}</div>;
+  return (
+    <>
+      <img src={homero} alt="" />
+
+      {message}
+    </>
+  );
 };
 
 export default Confirm;
