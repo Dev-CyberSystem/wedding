@@ -1,10 +1,11 @@
 import "./StyleHero.css"
 import React, { useState, useEffect } from 'react';
 import { Container, Row, Col, Image } from 'react-bootstrap';
+import dj from '../../public/dj.jpg';
 
 const Hero = () => {
   const calculateTimeLeft = () => {
-    const weddingDate = new Date('2024-11-15T00:00:00');
+    const weddingDate = new Date('2024-10-12T00:00:00');
     const difference = weddingDate - new Date();
     let timeLeft = {};
 
@@ -34,29 +35,29 @@ const Hero = () => {
     <Container className="text-center my-5">
       <Row className="align-items-center">
         <Col md={6}>
-          <h2 className="couple-name">James & Amelia</h2>
-          <p>We Are Getting Married November 15, 2024</p>
+          <h2 className="couple-name">JJ & DAI</h2>
+          <p>Nos casamos 12 Octubre 2024</p>
           <div id="countdown" className="d-flex justify-content-center">
             <div className="time-unit mx-3">
               <h3>{timeLeft.days || '0'}</h3>
-              <p>Days</p>
+              <p>Dias</p>
             </div>
             <div className="time-unit mx-3">
               <h3>{timeLeft.hours || '0'}</h3>
-              <p>Hours</p>
+              <p>Horas</p>
             </div>
             <div className="time-unit mx-3">
               <h3>{timeLeft.minutes || '0'}</h3>
-              <p>Min</p>
+              <p>Minutos</p>
             </div>
             <div className="time-unit mx-3">
               <h3>{timeLeft.seconds || '0'}</h3>
-              <p>Sec</p>
+              <p>Segundos</p>
             </div>
           </div>
         </Col>
         <Col md={6}>
-          <Image src="/path_to_your_image.jpg" alt="Couple" fluid rounded />
+          <Image src={dj} alt="Foto Daiana y Juan" fluid rounded className="fotoHero" />
         </Col>
       </Row>
     </Container>
